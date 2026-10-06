@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="Book web development, digital marketing, advertising and research services with MMRKE Trading Global Solutions in Kampala." name="description"/>
+  <title>
+   MMRKE | Book a service
+  </title>
+  <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <script defer="" src="config.js">
+  </script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+  </script>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body>
+  <div aria-hidden="true" class="reading-progress">
+   <span id="reading-progress">
+   </span>
+  </div>
+  <!-- Main navigation -->
+<header>
+   <a class="brand" href="#">
+    <span class="monogram">
+     M
+    </span>
+    <span>
+     MMRKE
+     <small>
+      TRADING GLOBAL SOLUTIONS
+     </small>
+    </span>
+   </a>
+   <button aria-controls="navigation" aria-expanded="false" class="menu-button" id="menu">
+    Menu
+   </button>
+   <nav id="navigation">
+    <a href="#services">
+     Our services
+    </a>
+    <a href="#how">
+     How it works
+    </a>
+    <a href="#questions">
+     FAQs
+    </a>
+   </nav>
+   <a class="header-button" href="#booking">
+    Book a service
+   </a>
+  </header>
+  <!-- Main website content -->
+<main>
+   <!-- Introduction -->
+<section class="intro">
+    <div class="eyebrow">
+     <span>
+     </span>
+     YOUR NEXT MOVE STARTS HERE
+    </div>
+    <div class="intro-grid">
+     <h1>
+      Big ideas.
+      <br/>
+      <em>
+       Real solutions.
+      </em>
+     </h1>
+     <div>
+      <p>
+       From your first website to your next campaign, find the expertise to move your business forward.
+      </p>
+      <div class="location">
+       Kyanja, Kampala, Uganda
+      </div>
+      <div class="hero-capabilities">
+       <span>
+        Design
+       </span>
+       <span>
+        Development
+       </span>
+       <span>
+        Growth
+       </span>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Service selection and booking -->
+<section class="workspace" id="services">
+    <div class="service-list">
+     <div class="section-top">
+      <h2>
+       What can we help you with?
+      </h2>
+      <span>
+       01 / CHOOSE A SERVICE
+      </span>
+     </div>
+     <div class="cards" id="services-list">
+     </div>
+     <div aria-live="polite" class="service-insight">
+      <span class="eyebrow">
+       YOUR PROJECT POSSIBILITIES
+      </span>
+      <h3 id="insight-title">
+      </h3>
+      <ul id="insight-list">
+      </ul>
+     </div>
+     <div class="support-note">
+      A clear scope. A tailored quote. No payment before you agree.
+     </div>
+    </div>
+    <!-- Payment preferences and booking form -->
+<aside id="booking">
+     <div class="booking-heading">
+      <span class="eyebrow">
+       LET’S GET STARTED
+      </span>
+      <h2>
+       Book your next move.
+      </h2>
+      <p>
+       Choose how to pay, then tell us about your project.
+      </p>
+      <a class="service-change" href="#services">
+       Change service
+      </a>
+     </div>
+     <div class="payment-options upfront-payment" id="payment-picker">
+      <span class="eyebrow">
+       STEP 1 / PAYMENT PREFERENCE
+      </span>
+      <h3>
+       How would you like to pay?
+      </h3>
+      <p id="picker-service">
+       Web Development
+      </p>
+      <div class="payment-button-grid">
+       <button data-preference="Mobile Money" type="button">
+        <span class="pay-symbol">
+         ▣
+        </span>
+        <strong>
+         Mobile Money
+        </strong>
+        <small>
+         MTN / Airtel via Pesapal
+        </small>
+       </button>
+       <button data-preference="Card" type="button">
+        <span class="pay-symbol">
+         ▤
+        </span>
+        <strong>
+         Debit / Credit Card
+        </strong>
+        <small>
+         Secure checkout via Pesapal
+        </small>
+       </button>
+       <button data-preference="PayPal" type="button">
+        <span class="pay-symbol">
+         P
+        </span>
+        <strong>
+         PayPal
+        </strong>
+        <small>
+         Pay with your PayPal account
+        </small>
+       </button>
+      </div>
+      <p>
+       You’ll receive a project quote before any payment is collected.
+      </p>
+     </div>
+     <div class="chosen" hidden="" id="payment-preference-summary">
+      <small>
+       PAYMENT PREFERENCE
+      </small>
+      <strong id="preference-label">
+      </strong>
+      <button class="back" id="change-preference" type="button">
+       Change payment method
+      </button>
+     </div>
+     <div class="progress">
+      <div class="current" id="progress-1">
+       <span>
+        1
+       </span>
+       Details
+      </div>
+      <div id="progress-2">
+       <span>
+        2
+       </span>
+       Review
+      </div>
+      <div id="progress-3">
+       <span>
+        3
+       </span>
+       Complete
+      </div>
+     </div>
+     <form id="booking-form">
+      <div class="chosen">
+       <small>
+        YOUR SELECTED SERVICE
+       </small>
+       <strong id="selected-service">
+        Web Development
+       </strong>
+      </div>
+      <div id="details-step">
+       <label>
+        Full name
+        <input autocomplete="name" maxlength="150" name="name" placeholder="Your full name" required=""/>
+       </label>
+       <div class="field-row">
+        <label>
+         Email address
+         <input autocomplete="email" maxlength="200" name="email" placeholder="you@example.com" required="" type="email"/>
+        </label>
+        <label>
+         Phone number
+         <input autocomplete="tel" maxlength="40" name="phone" placeholder="+256 …" required="" type="tel"/>
+        </label>
+       </div>
+       <label>
+        Preferred start date
+        <input name="date" required="" type="date"/>
+       </label>
+       <div class="brief-builder">
+        <div class="brief-heading">
+         <span>
+          Build your project brief
+         </span>
+         <span class="optional">
+          Optional
+         </span>
+        </div>
+        <p>
+         Select what matters to you. We’ll add it to your brief.
+        </p>
+        <div class="brief-options" id="brief-options">
+        </div>
+        <button class="brief-apply" id="apply-brief" type="button">
+         Add selections to my brief
+        </button>
+        <span class="brief-feedback" id="brief-feedback" role="status">
+        </span>
+       </div>
+       <label>
+        Tell us about your project
+        <textarea maxlength="3000" name="details" placeholder="What would you like to achieve? Include your scope and any deadlines." required="" rows="3"></textarea>
+        <span class="character-count" id="character-count">
+         0 / 3000
+        </span>
+       </label>
+       <button class="primary" type="submit">
+        Review booking
+       </button>
+       <p class="fine">
+        Request a quote first. Your date is subject to confirmation.
+       </p>
+      </div>
+      <div hidden="" id="review-step">
+       <h3 class="review-title">
+        Your project at a glance
+       </h3>
+       <dl id="review-fields">
+       </dl>
+       <div class="project-details" id="project-description">
+       </div>
+       <div class="quote">
+        <span>
+         Total
+        </span>
+        <strong>
+         Quote required
+        </strong>
+       </div>
+       <p class="payment-notice">
+        Submit your request to receive a quote. You can return with your private booking key to pay an approved quote by Mobile Money, Card or PayPal.
+       </p>
+       <label class="consent">
+        <input id="consent" type="checkbox"/>
+        I agree that my details may be used to respond to this service request.
+       </label>
+       <button class="primary" id="submit-booking" type="submit">
+        Submit booking request
+       </button>
+       <button class="back" id="edit-details" type="button">
+        Edit details
+       </button>
+      </div>
+     </form>
+     <div class="success" hidden="" id="complete-step">
+      <span class="success-icon">
+       ✓
+      </span>
+      <h3>
+       Booking request received
+      </h3>
+      <p>
+       Your request has been saved. Your preferred date will be confirmed after review.
+      </p>
+      <div class="receipt">
+       <small>
+        PRIVATE BOOKING KEY — KEEP THIS SAFE
+       </small>
+       <strong id="booking-key">
+       </strong>
+       <hr/>
+       <span id="receipt-service">
+       </span>
+       <p id="receipt-date">
+       </p>
+       <p>
+        Status: Awaiting quote
+       </p>
+       <p>
+        Payment: Not paid
+       </p>
+      </div>
+      <p class="fine">
+       Save your key to check your quote and pay later. It grants access to your booking’s payment status.
+      </p>
+      <button class="copy-key" id="copy-key" type="button">
+       Copy booking key
+      </button>
+      <span class="brief-feedback" id="copy-feedback" role="status">
+      </span>
+      <button class="primary" id="download-receipt" type="button">
+       Download booking receipt
+      </button>
+      <button class="back" id="new-booking" type="button">
+       Book another service
+      </button>
+     </div>
+     <p class="error" hidden="" id="booking-error" role="alert">
+     </p>
+     <details class="return-booking">
+      <summary>
+       Already booked? View your quote &amp; pay
+      </summary>
+      <label>
+       Private booking key
+       <input autocomplete="off" id="lookup-key" placeholder="Paste the key from your receipt"/>
+      </label>
+      <button class="primary" id="lookup-booking" type="button">
+       View booking
+      </button>
+      <div id="quote-result" role="status">
+      </div>
+      <div class="payment-options" id="payment-options">
+       <h3>
+        Choose how to pay
+       </h3>
+       <div class="payment-button-grid">
+        <button data-payment="mobile" type="button">
+         <span class="pay-symbol">
+          ▣
+         </span>
+         <strong>
+          Mobile Money
+         </strong>
+         <small>
+          MTN / Airtel via Pesapal
+         </small>
+        </button>
+        <button data-payment="card" type="button">
+         <span class="pay-symbol">
+          ▤
+         </span>
+         <strong>
+          Debit / Credit Card
+         </strong>
+         <small>
+          Secure card checkout
+         </small>
+        </button>
+        <button data-payment="paypal" type="button">
+         <span class="pay-symbol">
+          P
+         </span>
+         <strong>
+          PayPal
+         </strong>
+         <small>
+          Pay with your PayPal account
+         </small>
+        </button>
+       </div>
+       <p id="payment-feedback" role="status">
+        Enter your booking key and view an approved quote first.
+       </p>
+      </div>
+      <div id="paypal-buttons">
+      </div>
+     </details>
+    </aside>
+   </section>
+   <!-- How booking works -->
+<section class="how" id="how">
+    <div>
+     <span class="eyebrow">
+      A SIMPLE WAY FORWARD
+     </span>
+     <h2>
+      Your project, in three steps.
+     </h2>
+    </div>
+    <div class="how-item">
+     <span>
+      01
+     </span>
+     <h3>
+      Choose your service
+     </h3>
+     <p>
+      Select the support your business needs.
+     </p>
+    </div>
+    <div class="how-item">
+     <span>
+      02
+     </span>
+     <h3>
+      Share your brief
+     </h3>
+     <p>
+      Send your goals and preferred start date.
+     </p>
+    </div>
+    <div class="how-item">
+     <span>
+      03
+     </span>
+     <h3>
+      Agree, then pay
+     </h3>
+     <p>
+      Review your approved quote and pay using Mobile Money, Card or PayPal.
+     </p>
+    </div>
+   </section>
+   <!-- Frequently asked questions -->
+<section class="faq" id="questions">
+    <div>
+     <span class="eyebrow">
+      GOOD TO KNOW
+     </span>
+     <h2>
+      A little clarity
+      <br/>
+      before you begin.
+     </h2>
+    </div>
+    <div>
+     <div class="faq-item">
+      <button aria-expanded="false">
+       How much does a service cost?
+       <span>
+        +
+       </span>
+      </button>
+      <p hidden="">
+       Each project is quoted based on its scope. Submit your brief to request a tailored quote.
+      </p>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false">
+       Is my chosen date confirmed immediately?
+       <span>
+        +
+       </span>
+      </button>
+      <p hidden="">
+       Your date is a preference. The team reviews your project and availability before confirming it.
+      </p>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false">
+       How do I pay for my project?
+       <span>
+        +
+       </span>
+      </button>
+      <p hidden="">
+       Keep the private key on your booking receipt. After your quote is approved, enter the key above to view it and choose Mobile Money, Card or PayPal. Payment availability depends on the business’s checkout setup.
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+<!-- Business social links: edit MMRKE_SOCIALS in config.js -->
+<section class="social-section" aria-labelledby="social-title">
+  <h2 id="social-title">Let’s stay connected.</h2>
+  <p>Ask about a project or follow our latest updates.</p>
+  <div class="social-links" id="social-links"></div>
+  <p id="social-feedback" role="status"></p>
+</section>
+<footer>
+   <a class="brand" href="#">
+    <span class="monogram">
+     M
+    </span>
+    <span>
+     MMRKE
+     <small>
+      TRADING GLOBAL SOLUTIONS
+     </small>
+    </span>
+   </a>
+   <p>
+    Kyanja, Kampala, Uganda
+   </p>
+   <span>
+    ©
+    <span id="year">
+    </span>
+    MMRKE. All rights reserved.
+   </span>
+  </footer>
+  <a class="mobile-book" href="#booking" id="mobile-book">
+   Book
+   <span id="mobile-service">
+    Web Development
+   </span>
+  </a>
+  <a aria-label="Back to top" class="back-top" href="#">
+   ↑
+  </a>
+ <button type="button" id="whatsapp-contact" class="whatsapp-contact" aria-label="Chat on WhatsApp"><img src="assets/social/whatsapp.svg" alt="" width="24" height="24">WhatsApp</button>
+</body>
+</html>

@@ -1,0 +1,5 @@
+[functions.payments]
+verify_jwt = false
+
+[functions.pesapal]
+verify_jwt = false
